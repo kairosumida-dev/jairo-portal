@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JaiRO // Cadastro &amp; Rates — Fase 1 (99/50)</title>
+  <title>JaiRO // Cadastro &amp; Rates</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=3" />
+  <link rel="stylesheet" href="./styles.css?v=4" />
 </head>
 <body>
   <div class="noise-layer" aria-hidden="true"></div>
@@ -18,7 +18,7 @@
         <span class="brand-mark">J//1</span>
         <div>
           <div class="brand-title">JaiRO <span class="mono tag-phase" data-i18n="phase_badge">FASE 1 · PRONTERA 99/50</span></div>
-          <div class="brand-sub" data-i18n="brand_sub">Renewal Dia 1 · 2ªs Classes · Mundo Vivo · Epic P2P</div>
+          <div class="brand-sub" data-i18n="brand_sub">Renewal · 2ªs Classes · Mundo Vivo</div>
         </div>
       </div>
 
@@ -30,51 +30,30 @@
   </header>
 
   <main class="container main-wrap">
-    <section class="status-strip">
-      <div class="stat-pill">
-        <span class="dot-live"></span>
-        <span class="stat-label" data-i18n="stat_territory_lbl">Território Ativo</span>
-        <strong class="mono" data-i18n="stat_territory_val">Prontera (Fase 1)</strong>
-      </div>
-      <div class="stat-pill">
-        <span class="stat-label" data-i18n="stat_cap_lbl">Teto Atual</span>
-        <strong class="mono">Lv. 99 / Job 50</strong>
-      </div>
-      <div class="stat-pill">
-        <span class="stat-label" data-i18n="stat_mech_lbl">Mecânica Base</span>
-        <strong class="mono">Renewal (Dia 1)</strong>
-      </div>
-      <div class="stat-pill">
-        <span class="stat-label" data-i18n="stat_bots_lbl">População do Mundo</span>
-        <strong class="mono" data-i18n="stat_bots_val">700 Aventureiros Persistentes</strong>
-      </div>
-    </section>
-
     <div class="section-head">
       <div>
-        <p class="eyebrow mono" data-i18n="hero_eyebrow">ACESSO PRIVADO POR CONVITE</p>
-        <h1 data-i18n="hero_title">Criar Conta &amp; Rates do Servidor</h1>
-        <p class="lead" data-i18n="hero_lead">
-          Crie sua conta para entrar pela sala privada via Jogar.bat. Drops e segredos de cada mapa são descobertos diretamente dentro do jogo com @whodrops e @mobinfo.
-        </p>
+        <h1 data-i18n="hero_title">Criar Conta &amp; Rates</h1>
       </div>
     </div>
 
     <div class="register-layout">
-      <!-- COLUNA ESQUERDA: CADASTRO -->
+      <!-- CADASTRO ENXUTO -->
       <form id="registerForm" class="form-card" autocomplete="off">
-        <div class="card-tag mono" data-i18n="reg_tag">01 // CADASTRO DE CONTA</div>
-        <h2 data-i18n="reg_title">Novo Jogador</h2>
+        <div class="card-tag mono" data-i18n="reg_tag">CADASTRO</div>
+        <h2 data-i18n="reg_title">Nova Conta</h2>
 
         <div class="form-grid" style="margin-top:16px">
           <label class="field">
-            <span data-i18n="lbl_invite">Código de Convite</span>
-            <input id="regInvite" class="input-field mono" type="text" required placeholder="JAIRO-PRONTERA-01" value="JAIRO-PRONTERA-01" />
+            <span data-i18n="lbl_user">Usuário (4–23 caracteres)</span>
+            <input id="regUser" class="input-field mono" type="text" required minlength="4" maxlength="23" pattern="[A-Za-z0-9_]+" placeholder="ex: kairo" />
           </label>
 
           <label class="field">
-            <span data-i18n="lbl_user">Usuário (4–23 caracteres, sem _M/_F)</span>
-            <input id="regUser" class="input-field mono" type="text" required minlength="4" maxlength="23" pattern="[A-Za-z0-9_]+" placeholder="ex: kairo" />
+            <span data-i18n="lbl_sex">Gênero</span>
+            <select id="regSex" class="select-field">
+              <option value="M" data-i18n="opt_male">Masculino (M)</option>
+              <option value="F" data-i18n="opt_female">Feminino (F)</option>
+            </select>
           </label>
 
           <label class="field">
@@ -86,41 +65,7 @@
             <span data-i18n="lbl_pass2">Confirmar Senha</span>
             <input id="regPass2" class="input-field" type="password" required minlength="6" maxlength="32" placeholder="••••••••" />
           </label>
-
-          <label class="field">
-            <span data-i18n="lbl_sex">Gênero do Personagem</span>
-            <select id="regSex" class="select-field">
-              <option value="M" data-i18n="opt_male">Masculino (M)</option>
-              <option value="F" data-i18n="opt_female">Feminino (F)</option>
-            </select>
-          </label>
-
-          <label class="field">
-            <span data-i18n="lbl_class">Classe Pretendida (2ª Classe)</span>
-            <select id="regClass" class="select-field">
-              <option value="Knight">Knight</option>
-              <option value="Crusader">Crusader</option>
-              <option value="Wizard">Wizard</option>
-              <option value="Sage">Sage</option>
-              <option value="Hunter">Hunter</option>
-              <option value="Bard/Dancer">Bard / Dancer</option>
-              <option value="Priest">Priest</option>
-              <option value="Monk">Monk</option>
-              <option value="Assassin">Assassin</option>
-              <option value="Rogue">Rogue</option>
-              <option value="Blacksmith">Blacksmith</option>
-              <option value="Alchemist">Alchemist</option>
-            </select>
-          </label>
         </div>
-
-        <details class="vault-config">
-          <summary class="mono" data-i18n="vault_cfg_title">Configuração Avançada (Token do Cofre)</summary>
-          <div class="vault-cfg-body">
-            <p class="muted small" data-i18n="vault_cfg_hint">Se o servidor ainda não estiver com envio automático habilitado, você pode usar um token com acesso ao repositório privado ou baixar o ticket JSON para o Host importar.</p>
-            <input id="vaultToken" class="input-field mono" type="password" placeholder="github_pat_... (opcional)" />
-          </div>
-        </details>
 
         <div class="form-actions">
           <button class="btn-primary" type="submit" data-i18n="btn_submit">Criar Conta</button>
@@ -129,49 +74,38 @@
         <div id="regFeedback" class="feedback-box" hidden></div>
       </form>
 
-      <!-- COLUNA DIREITA: RATES & REGRAS -->
+      <!-- RATES -->
       <div style="display:flex;flex-direction:column;gap:16px">
         <article class="info-card">
-          <div class="card-tag mono">02 // EXP RATES</div>
-          <h3 data-i18n="card_exp_title">Progressão Escalonada (99/50)</h3>
+          <div class="card-tag mono">EXP RATES</div>
+          <h3 data-i18n="card_exp_title">Progressão do Servidor (99/50)</h3>
           <ul class="clean-list">
-            <li><strong class="mono">Lv. 1 – 40:</strong> <span class="mono" style="color:var(--accent)">Base 8x / Job 8x</span> — <span data-i18n="exp1_note">Arranque rápido até a 2ª classe</span></li>
-            <li><strong class="mono">Lv. 41 – 80:</strong> <span class="mono" style="color:var(--accent)">Base 5x / Job 5x</span> — <span data-i18n="exp2_note">Campos médios e dungeons</span></li>
-            <li><strong class="mono">Lv. 81 – 99:</strong> <span class="mono" style="color:var(--accent)">Base 3x / Job 3x</span> — <span data-i18n="exp3_note">Reta final tática em grupo</span></li>
+            <li><strong data-i18n="exp_base_lbl">Base EXP:</strong> <span class="mono" style="color:var(--accent)">2x</span></li>
+            <li><strong data-i18n="exp_job_lbl">Job EXP:</strong> <span class="mono" style="color:var(--accent)">2x</span></li>
           </ul>
         </article>
 
         <article class="info-card">
-          <div class="card-tag mono">03 // DROP RATES</div>
-          <h3 data-i18n="card_drop_title">Drops Reestruturados</h3>
+          <div class="card-tag mono">DROP RATES</div>
+          <h3 data-i18n="card_drop_title">Drops Customizados</h3>
           <ul class="clean-list">
             <li><strong data-i18n="drp_mat">Materiais &amp; Consumíveis:</strong> <span class="mono">5x</span></li>
-            <li><strong data-i18n="drp_eq">Equipamentos Custom:</strong> <span class="mono">0.20% – 12%</span> <span class="muted small" data-i18n="drp_eq_note">(conforme raridade)</span></li>
+            <li><strong data-i18n="drp_eq">Equipamentos:</strong> <span class="mono">0.20% – 12%</span></li>
             <li><strong data-i18n="drp_card">Cartas Comuns / MVP:</strong> <span class="mono">0.25% / 0.10%</span></li>
           </ul>
           <p class="muted small" style="margin:12px 0 0" data-i18n="cmd_hint">
-            Comandos liberados no jogo: <span class="mono">@whodrops</span> e <span class="mono">@mobinfo</span>.
+            Descubra mapas, monstros e drops explorando na raça.
           </p>
-        </article>
-
-        <article class="info-card">
-          <div class="card-tag mono" data-i18n="flow_tag">04 // COMO JOGAR</div>
-          <h3 data-i18n="how_works_title">Entrada em 1 Clique</h3>
-          <ol class="clean-steps">
-            <li data-i18n="step1">Crie sua conta ao lado com o código de convite do grupo.</li>
-            <li data-i18n="step2">Abra o <strong>Jogar.bat</strong>: se nenhum amigo estiver online, seu PC assume como Host automaticamente; se já houver sala aberta, você entra direto via Epic P2P.</li>
-            <li data-i18n="step3">O progresso é salvo na nuvem de forma contínua para ninguém perder nada.</li>
-          </ol>
         </article>
       </div>
     </div>
   </main>
 
   <footer class="footer container mono">
-    <span>JaiRO // Fase 1: Prontera (Cap 99/50)</span>
-    <span>Renewal Day 1 · EOS P2P</span>
+    <span>JaiRO // Prontera 99/50</span>
+    <span>Renewal</span>
   </footer>
 
-  <script src="./app.js?v=3"></script>
+  <script src="./app.js?v=4"></script>
 </body>
 </html>

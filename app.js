@@ -4,85 +4,47 @@
   const I18N = {
     pt: {
       phase_badge: "FASE 1 · PRONTERA 99/50",
-      brand_sub: "Renewal Dia 1 · 2ªs Classes · Mundo Vivo · Epic P2P",
-      stat_territory_lbl: "Território Ativo",
-      stat_territory_val: "Prontera (Fase 1)",
-      stat_cap_lbl: "Teto Atual",
-      stat_mech_lbl: "Mecânica Base",
-      stat_bots_lbl: "População do Mundo",
-      stat_bots_val: "700 Aventureiros Persistentes",
-      hero_eyebrow: "ACESSO PRIVADO POR CONVITE",
-      hero_title: "Criar Conta & Rates do Servidor",
-      hero_lead: "Crie sua conta para entrar pela sala privada via Jogar.bat. Drops e segredos de cada mapa são descobertos diretamente dentro do jogo com @whodrops e @mobinfo.",
-      reg_tag: "01 // CADASTRO DE CONTA",
-      reg_title: "Novo Jogador",
-      lbl_invite: "Código de Convite",
-      lbl_user: "Usuário (4–23 caracteres, sem _M/_F)",
-      lbl_pass: "Senha (6–32 caracteres)",
-      lbl_pass2: "Confirmar Senha",
-      lbl_sex: "Gênero do Personagem",
+      brand_sub: "Renewal · 2ªs Classes · Mundo Vivo",
+      hero_title: "Criar Conta & Rates",
+      reg_tag: "CADASTRO",
+      reg_title: "Nova Conta",
+      lbl_user: "Usuário (4–23 caracteres)",
+      lbl_sex: "Gênero",
       opt_male: "Masculino (M)",
       opt_female: "Feminino (F)",
-      lbl_class: "Classe Pretendida (2ª Classe)",
-      vault_cfg_title: "Configuração Avançada (Token do Cofre)",
-      vault_cfg_hint: "Se o servidor ainda não estiver com envio automático habilitado, você pode usar um token com acesso ao repositório privado ou baixar o ticket JSON para o Host importar.",
+      lbl_pass: "Senha (6–32 caracteres)",
+      lbl_pass2: "Confirmar Senha",
       btn_submit: "Criar Conta",
-      card_exp_title: "Progressão Escalonada (99/50)",
-      exp1_note: "Arranque rápido até a 2ª classe",
-      exp2_note: "Campos médios e dungeons",
-      exp3_note: "Reta final tática em grupo",
-      card_drop_title: "Drops Reestruturados",
+      card_exp_title: "Progressão do Servidor (99/50)",
+      exp_base_lbl: "Base EXP:",
+      exp_job_lbl: "Job EXP:",
+      card_drop_title: "Drops Customizados",
       drp_mat: "Materiais & Consumíveis:",
-      drp_eq: "Equipamentos Custom:",
-      drp_eq_note: "(conforme raridade)",
+      drp_eq: "Equipamentos:",
       drp_card: "Cartas Comuns / MVP:",
-      cmd_hint: "Comandos liberados no jogo: @whodrops e @mobinfo.",
-      flow_tag: "04 // COMO JOGAR",
-      how_works_title: "Entrada em 1 Clique",
-      step1: "Crie sua conta ao lado com o código de convite do grupo.",
-      step2: "Abra o Jogar.bat: se nenhum amigo estiver online, seu PC assume como Host automaticamente; se já houver sala aberta, você entra direto via Epic P2P.",
-      step3: "O progresso é salvo na nuvem de forma contínua para ninguém perder nada.",
+      cmd_hint: "Descubra mapas, monstros e drops explorando na raça.",
     },
     en: {
       phase_badge: "PHASE 1 · PRONTERA 99/50",
-      brand_sub: "Day-1 Renewal · 2nd Classes · Living World · Epic P2P",
-      stat_territory_lbl: "Active Territory",
-      stat_territory_val: "Prontera (Phase 1)",
-      stat_cap_lbl: "Current Cap",
-      stat_mech_lbl: "Base Mechanics",
-      stat_bots_lbl: "World Population",
-      stat_bots_val: "700 Persistent Adventurers",
-      hero_eyebrow: "INVITE-ONLY PRIVATE ACCESS",
-      hero_title: "Create Account & Server Rates",
-      hero_lead: "Create your account to join the private room via Jogar.bat. Map spawns, drops and item secrets are discovered in-game using @whodrops and @mobinfo.",
-      reg_tag: "01 // ACCOUNT REGISTRATION",
-      reg_title: "New Player",
-      lbl_invite: "Invite Code",
-      lbl_user: "Username (4–23 chars, no _M/_F)",
-      lbl_pass: "Password (6–32 chars)",
-      lbl_pass2: "Confirm Password",
-      lbl_sex: "Character Gender",
+      brand_sub: "Renewal · 2nd Classes · Living World",
+      hero_title: "Create Account & Rates",
+      reg_tag: "REGISTER",
+      reg_title: "New Account",
+      lbl_user: "Username (4–23 chars)",
+      lbl_sex: "Gender",
       opt_male: "Male (M)",
       opt_female: "Female (F)",
-      lbl_class: "Target Class (2nd Class)",
-      vault_cfg_title: "Advanced Setup (Vault Token)",
-      vault_cfg_hint: "If direct server submission is not enabled yet, you may supply a scoped private repo token or download the signed JSON ticket for the Host.",
+      lbl_pass: "Password (6–32 chars)",
+      lbl_pass2: "Confirm Password",
       btn_submit: "Create Account",
-      card_exp_title: "Tiered Progression (99/50)",
-      exp1_note: "Fast progression into 2nd class",
-      exp2_note: "Mid-tier fields & dungeons",
-      exp3_note: "Tactical party push to cap",
-      card_drop_title: "Rebalanced Drops",
+      card_exp_title: "Server Progression (99/50)",
+      exp_base_lbl: "Base EXP:",
+      exp_job_lbl: "Job EXP:",
+      card_drop_title: "Custom Drops",
       drp_mat: "Materials & Consumables:",
-      drp_eq: "Custom Equipment:",
-      drp_eq_note: "(by rarity tier)",
+      drp_eq: "Equipment:",
       drp_card: "Normal / MVP Cards:",
-      cmd_hint: "In-game discovery commands enabled: @whodrops & @mobinfo.",
-      flow_tag: "04 // HOW TO PLAY",
-      how_works_title: "1-Click Launch",
-      step1: "Create your account using the group invite code.",
-      step2: "Run Jogar.bat: if nobody is online yet, your PC becomes Host automatically; otherwise you join directly via Epic P2P.",
-      step3: "Progress is continuously backed up to the cloud Vault.",
+      cmd_hint: "Discover maps, monsters and drops by exploring the world.",
     },
   };
 
@@ -158,17 +120,11 @@
 
   async function handleRegister(ev) {
     ev.preventDefault();
-    const invite = $("regInvite").value.trim();
     const user = $("regUser").value.trim();
     const pass = $("regPass").value;
     const pass2 = $("regPass2").value;
     const sex = $("regSex").value;
-    const targetClass = $("regClass").value;
-    const token = $("vaultToken").value.trim();
     const fb = $("regFeedback");
-
-    if (token) localStorage.setItem("jairo_vault_token", token);
-    else localStorage.removeItem("jairo_vault_token");
 
     if (pass !== pass2) {
       fb.hidden = false;
@@ -179,12 +135,10 @@
 
     const ts = new Date().toISOString().replace(/[:.]/g, "-");
     const ticket = {
-      schema: "jairo.registration.v2",
-      invite_code: invite,
+      schema: "jairo.registration.v3",
       userid: user,
       password_md5: md5Hex(pass),
       sex,
-      preferred_class: targetClass,
       created_at: new Date().toISOString(),
     };
     const filename = `${ts}_${user}.json`;
@@ -197,7 +151,7 @@
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(ticket),
         });
-        if (cfResp.ok) delivered.push("Cloudflare Portal (/jairo/api/register)");
+        if (cfResp.ok) delivered.push("Portal JaiRO");
       } catch (_) {}
     }
 
@@ -208,37 +162,19 @@
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(ticket),
         });
-        if (resp.ok) delivered.push("Host Local (127.0.0.1:8787)");
-      } catch (_) {}
-    }
-
-    if (!delivered.length && token) {
-      try {
-        const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(ticket, null, 2))));
-        const ghResp = await fetch(
-          `https://api.github.com/repos/kairosumida-dev/jairo-vault/contents/queue/registrations/${encodeURIComponent(filename)}`,
-          {
-            method: "PUT",
-            headers: {
-              Authorization: `Bearer ${token}`,
-              Accept: "application/vnd.github+json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ message: `queue: register ${user}`, content: b64 }),
-          }
-        );
-        if (ghResp.ok) delivered.push("GitHub Vault");
+        if (resp.ok) delivered.push("Host Local");
       } catch (_) {}
     }
 
     fb.hidden = false;
     fb.className = "feedback-box";
     if (delivered.length) {
-      fb.innerHTML = `<strong>${lang === "pt" ? "Conta enviada com sucesso!" : "Account submitted!"}</strong><br><span class="mono small">${delivered.join(" · ")}</span>`;
+      fb.innerHTML = `<strong>${lang === "pt" ? "Conta criada com sucesso!" : "Account created!"}</strong><br><span class="mono small">${user} (${sex})</span>`;
+      $("registerForm").reset();
     } else {
       fb.innerHTML = `
         <strong>${lang === "pt" ? "Ticket gerado!" : "Ticket generated!"}</strong>
-        <div class="small muted">${lang === "pt" ? "Baixe o ticket e envie ao Host ou coloque em vault_repo/queue/registrations/." : "Download the ticket and send it to the Host or drop it into vault_repo/queue/registrations/."}</div>
+        <div class="small muted">${lang === "pt" ? "Baixe o arquivo e envie ao Host para ativar sua conta." : "Download the ticket and send it to the Host."}</div>
         <button id="dlTicketBtn" class="btn-secondary mono" type="button">⬇ ${filename}</button>
       `;
       $("dlTicketBtn").addEventListener("click", () => downloadTicket(filename, ticket));
@@ -266,8 +202,6 @@
     document.documentElement.dataset.theme = savedTheme;
     $("themeToggle").textContent = savedTheme.toUpperCase();
   }
-  const savedTok = localStorage.getItem("jairo_vault_token");
-  if (savedTok) $("vaultToken").value = savedTok;
 
   applyI18n();
 })();
