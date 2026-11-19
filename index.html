@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JaiRO // Fase 1 — Prontera Frontier (99/50)</title>
+  <title>JaiRO // Cadastro &amp; Rates — Fase 1 (99/50)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=2" />
+  <link rel="stylesheet" href="./styles.css?v=3" />
 </head>
 <body>
   <div class="noise-layer" aria-hidden="true"></div>
@@ -18,16 +18,9 @@
         <span class="brand-mark">J//1</span>
         <div>
           <div class="brand-title">JaiRO <span class="mono tag-phase" data-i18n="phase_badge">FASE 1 · PRONTERA 99/50</span></div>
-          <div class="brand-sub" data-i18n="brand_sub">Renewal Dia 1 · 2ªs Classes · Ecossistema 700 Bots · EOS P2P</div>
+          <div class="brand-sub" data-i18n="brand_sub">Renewal Dia 1 · 2ªs Classes · Mundo Vivo · Epic P2P</div>
         </div>
       </div>
-
-      <nav class="nav-tabs" aria-label="Navegação Principal">
-        <button class="nav-btn active" data-tab="atlas" data-i18n="tab_atlas">Atlas Visual</button>
-        <button class="nav-btn" data-tab="table" data-i18n="tab_table">Tabela de Aprovação</button>
-        <button class="nav-btn" data-tab="rates" data-i18n="tab_rates">Rates &amp; Arquitetura</button>
-        <button class="nav-btn accent-btn" data-tab="register" data-i18n="tab_register">Criar Conta</button>
-      </nav>
 
       <div class="controls">
         <button id="langToggle" class="ctrl-btn mono" type="button" title="Switch Language">PT-BR</button>
@@ -37,258 +30,148 @@
   </header>
 
   <main class="container main-wrap">
-    <!-- STATUS STRIP -->
     <section class="status-strip">
       <div class="stat-pill">
         <span class="dot-live"></span>
         <span class="stat-label" data-i18n="stat_territory_lbl">Território Ativo</span>
-        <strong class="mono">Prontera (22 <span data-i18n="maps_word">mapas</span>)</strong>
+        <strong class="mono" data-i18n="stat_territory_val">Prontera (Fase 1)</strong>
       </div>
       <div class="stat-pill">
-        <span class="stat-label" data-i18n="stat_cap_lbl">Limite Fase 1</span>
+        <span class="stat-label" data-i18n="stat_cap_lbl">Teto Atual</span>
         <strong class="mono">Lv. 99 / Job 50</strong>
       </div>
       <div class="stat-pill">
-        <span class="stat-label" data-i18n="stat_mobs_lbl">Spawns Realocados</span>
-        <strong class="mono" id="statMobCount">101</strong>
+        <span class="stat-label" data-i18n="stat_mech_lbl">Mecânica Base</span>
+        <strong class="mono">Renewal (Dia 1)</strong>
       </div>
       <div class="stat-pill">
-        <span class="stat-label" data-i18n="stat_items_lbl">Itens &amp; Cartas JaiRO</span>
-        <strong class="mono" id="statItemCount">50</strong>
-      </div>
-      <div class="stat-pill">
-        <span class="stat-label" data-i18n="stat_bots_lbl">Bots Persistentes</span>
-        <strong class="mono" data-i18n="stat_bots_val">600 Sim · 60 Lojas · 40 Ativos</strong>
+        <span class="stat-label" data-i18n="stat_bots_lbl">População do Mundo</span>
+        <strong class="mono" data-i18n="stat_bots_val">700 Aventureiros Persistentes</strong>
       </div>
     </section>
 
-    <!-- TAB 1: ATLAS VISUAL DE PRONTERA -->
-    <section id="tab-atlas" class="tab-panel active">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow mono" data-i18n="atlas_eyebrow">MAPA TÁTICO DE PROGRESSÃO (LV. 1 → 99/50)</p>
-          <h1 data-i18n="atlas_title">Atlas Visual do Território de Prontera</h1>
-          <p class="lead" data-i18n="atlas_lead">
-            Clique em qualquer setor do mapa para revisar a introdução ecológica, os monstros realocados, quantidades de spawn e taxas de drop customizadas.
-          </p>
-        </div>
-        <div class="legend">
-          <span class="lg-item"><i class="sw sw-hub"></i> <span data-i18n="zone_hub">Cidades (Safe)</span></span>
-          <span class="lg-item"><i class="sw sw-starter"></i> Lv. 1–30</span>
-          <span class="lg-item"><i class="sw sw-dungeon"></i> <span data-i18n="zone_dungeon">Esgoto 20–58</span></span>
-          <span class="lg-item"><i class="sw sw-mid"></i> Lv. 28–68</span>
-          <span class="lg-item"><i class="sw sw-high"></i> Lv. 65–88</span>
-          <span class="lg-item"><i class="sw sw-endgame"></i> Lv. 80–99 / MVP</span>
-        </div>
+    <div class="section-head">
+      <div>
+        <p class="eyebrow mono" data-i18n="hero_eyebrow">ACESSO PRIVADO POR CONVITE</p>
+        <h1 data-i18n="hero_title">Criar Conta &amp; Rates do Servidor</h1>
+        <p class="lead" data-i18n="hero_lead">
+          Crie sua conta para entrar pela sala privada via Jogar.bat. Drops e segredos de cada mapa são descobertos diretamente dentro do jogo com @whodrops e @mobinfo.
+        </p>
       </div>
+    </div>
 
-      <div class="atlas-layout">
-        <div class="map-board-card">
-          <div class="map-board-wrap">
-            <svg id="mapLinksSvg" class="map-links-svg" aria-hidden="true"></svg>
-            <div id="pronteraGrid" class="prontera-grid"></div>
+    <div class="register-layout">
+      <!-- COLUNA ESQUERDA: CADASTRO -->
+      <form id="registerForm" class="form-card" autocomplete="off">
+        <div class="card-tag mono" data-i18n="reg_tag">01 // CADASTRO DE CONTA</div>
+        <h2 data-i18n="reg_title">Novo Jogador</h2>
+
+        <div class="form-grid" style="margin-top:16px">
+          <label class="field">
+            <span data-i18n="lbl_invite">Código de Convite</span>
+            <input id="regInvite" class="input-field mono" type="text" required placeholder="JAIRO-PRONTERA-01" value="JAIRO-PRONTERA-01" />
+          </label>
+
+          <label class="field">
+            <span data-i18n="lbl_user">Usuário (4–23 caracteres, sem _M/_F)</span>
+            <input id="regUser" class="input-field mono" type="text" required minlength="4" maxlength="23" pattern="[A-Za-z0-9_]+" placeholder="ex: kairo" />
+          </label>
+
+          <label class="field">
+            <span data-i18n="lbl_pass">Senha (6–32 caracteres)</span>
+            <input id="regPass" class="input-field" type="password" required minlength="6" maxlength="32" placeholder="••••••••" />
+          </label>
+
+          <label class="field">
+            <span data-i18n="lbl_pass2">Confirmar Senha</span>
+            <input id="regPass2" class="input-field" type="password" required minlength="6" maxlength="32" placeholder="••••••••" />
+          </label>
+
+          <label class="field">
+            <span data-i18n="lbl_sex">Gênero do Personagem</span>
+            <select id="regSex" class="select-field">
+              <option value="M" data-i18n="opt_male">Masculino (M)</option>
+              <option value="F" data-i18n="opt_female">Feminino (F)</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span data-i18n="lbl_class">Classe Pretendida (2ª Classe)</span>
+            <select id="regClass" class="select-field">
+              <option value="Knight">Knight</option>
+              <option value="Crusader">Crusader</option>
+              <option value="Wizard">Wizard</option>
+              <option value="Sage">Sage</option>
+              <option value="Hunter">Hunter</option>
+              <option value="Bard/Dancer">Bard / Dancer</option>
+              <option value="Priest">Priest</option>
+              <option value="Monk">Monk</option>
+              <option value="Assassin">Assassin</option>
+              <option value="Rogue">Rogue</option>
+              <option value="Blacksmith">Blacksmith</option>
+              <option value="Alchemist">Alchemist</option>
+            </select>
+          </label>
+        </div>
+
+        <details class="vault-config">
+          <summary class="mono" data-i18n="vault_cfg_title">Configuração Avançada (Token do Cofre)</summary>
+          <div class="vault-cfg-body">
+            <p class="muted small" data-i18n="vault_cfg_hint">Se o servidor ainda não estiver com envio automático habilitado, você pode usar um token com acesso ao repositório privado ou baixar o ticket JSON para o Host importar.</p>
+            <input id="vaultToken" class="input-field mono" type="password" placeholder="github_pat_... (opcional)" />
           </div>
-          <div class="map-board-footer mono">
-            <span data-i18n="board_hint">Dica: Nós com cadeado laranja indicam portais selados na Fase 1 (Mt. Mjolnir, Geffen e Deserto de Sograt).</span>
-          </div>
+        </details>
+
+        <div class="form-actions">
+          <button class="btn-primary" type="submit" data-i18n="btn_submit">Criar Conta</button>
         </div>
 
-        <aside id="mapInspector" class="inspector-card" aria-live="polite"></aside>
-      </div>
-    </section>
+        <div id="regFeedback" class="feedback-box" hidden></div>
+      </form>
 
-    <!-- TAB 2: TABELA MESTRA DE APROVAÇÃO -->
-    <section id="tab-table" class="tab-panel">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow mono" data-i18n="tbl_eyebrow">REVISÃO COMPLETA PARA APROVAÇÃO</p>
-          <h2 data-i18n="tbl_title">Tabela Mestra de Mapas, Monstros &amp; Drops</h2>
-          <p class="lead" data-i18n="tbl_lead">Filtre por zona, tipo de recompensa, classe ou busque qualquer monstro/item antes de liberar a expansão além de Prontera.</p>
-        </div>
-      </div>
-
-      <div class="filter-bar">
-        <input id="searchInput" class="input-field" type="search" placeholder="Buscar monstro, mapa, item, carta ou bônus..." data-i18n-placeholder="search_ph" />
-        <select id="zoneFilter" class="select-field">
-          <option value="all" data-i18n="opt_all_zones">Todas as Zonas</option>
-          <option value="starter">Anel Inicial (Lv. 1–30)</option>
-          <option value="dungeon">Esgoto 1F–4F (Lv. 20–58)</option>
-          <option value="mid">Cinturão Médio (Lv. 28–68)</option>
-          <option value="high">Avançado (Lv. 65–88)</option>
-          <option value="endgame">Endgame Abadia/Labirinto (Lv. 80–99)</option>
-        </select>
-        <select id="tierFilter" class="select-field">
-          <option value="all" data-i18n="opt_all_tiers">Todos os Drops / Tipos</option>
-          <option value="boss" data-i18n="opt_boss_only">Apenas MVPs &amp; Mini-Bosses</option>
-          <option value="card" data-i18n="opt_cards">Contém Cartas</option>
-          <option value="relic" data-i18n="opt_relics">Contém Relíquias</option>
-          <option value="rare" data-i18n="opt_rares">Contém Equips Raros</option>
-        </select>
-        <div class="mono count-badge" id="tableCountBadge">0 resultados</div>
-      </div>
-
-      <div class="table-card">
-        <table class="master-table">
-          <thead>
-            <tr>
-              <th data-i18n="col_map">Mapa &amp; Zona</th>
-              <th data-i18n="col_mob">Monstro (Realocado)</th>
-              <th data-i18n="col_stats">Lv · HP · Elem</th>
-              <th data-i18n="col_drops">Drops Reestruturados &amp; Taxas</th>
-            </tr>
-          </thead>
-          <tbody id="masterTableBody"></tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- TAB 3: RATES & ARQUITETURA -->
-    <section id="tab-rates" class="tab-panel">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow mono" data-i18n="rates_eyebrow">EQUILÍBRIO &amp; INFRAESTRUTURA</p>
-          <h2 data-i18n="rates_title">Rates da Fase 1 &amp; Arquitetura JaiRO</h2>
-          <p class="lead" data-i18n="rates_lead">Mecânica Renewal desde o Dia 1 com progressão escalonada até 99/50, rede EOS P2P e Cofre Oficial no GitHub.</p>
-        </div>
-      </div>
-
-      <div class="cards-grid-3">
+      <!-- COLUNA DIREITA: RATES & REGRAS -->
+      <div style="display:flex;flex-direction:column;gap:16px">
         <article class="info-card">
-          <div class="card-tag mono">01 // EXP CURVE</div>
-          <h3 data-i18n="card_exp_title">EXP Escalonada (Cap 99/50)</h3>
-          <ul id="expTierList" class="clean-list"></ul>
-        </article>
-
-        <article class="info-card">
-          <div class="card-tag mono">02 // LOOT TABLE</div>
-          <h3 data-i18n="card_drop_title">Taxas de Drop Customizadas</h3>
-          <ul class="clean-list" id="dropRateList"></ul>
-        </article>
-
-        <article class="info-card">
-          <div class="card-tag mono">03 // LIVING WORLD</div>
-          <h3 data-i18n="card_bots_title">700 Bots em 3 Camadas</h3>
+          <div class="card-tag mono">02 // EXP RATES</div>
+          <h3 data-i18n="card_exp_title">Progressão Escalonada (99/50)</h3>
           <ul class="clean-list">
-            <li><strong class="mono">600</strong> <span data-i18n="bot_l1">Simulação abstrata em segundo plano (farm real, níveis, clãs e PMs).</span></li>
-            <li><strong class="mono">60</strong> <span data-i18n="bot_l2">Mercadores ativos em Prontera vendendo o farm da Camada 1.</span></li>
-            <li><strong class="mono">40</strong> <span data-i18n="bot_l3">Entidades físicas sob demanda com spawn discreto nos mapas com jogadores.</span></li>
+            <li><strong class="mono">Lv. 1 – 40:</strong> <span class="mono" style="color:var(--accent)">Base 8x / Job 8x</span> — <span data-i18n="exp1_note">Arranque rápido até a 2ª classe</span></li>
+            <li><strong class="mono">Lv. 41 – 80:</strong> <span class="mono" style="color:var(--accent)">Base 5x / Job 5x</span> — <span data-i18n="exp2_note">Campos médios e dungeons</span></li>
+            <li><strong class="mono">Lv. 81 – 99:</strong> <span class="mono" style="color:var(--accent)">Base 3x / Job 3x</span> — <span data-i18n="exp3_note">Reta final tática em grupo</span></li>
           </ul>
         </article>
-      </div>
 
-      <div class="cards-grid-2">
         <article class="info-card">
-          <div class="card-tag mono">04 // EOS P2P + GITHUB VAULT</div>
-          <h3 data-i18n="card_net_title">Host Rotativo Sem Perder Saves</h3>
-          <p class="muted" data-i18n="card_net_desc">
-            O primeiro amigo a abrir o jogo puxa o snapshot mais recente do repositório privado jairo-vault no GitHub, assume o lock de Host e sobe a sala na Epic Online Services (EOS P2P). Snapshots automáticos sobem a cada 5 minutos e a fila de novas contas do site sincroniza a cada 15 segundos.
+          <div class="card-tag mono">03 // DROP RATES</div>
+          <h3 data-i18n="card_drop_title">Drops Reestruturados</h3>
+          <ul class="clean-list">
+            <li><strong data-i18n="drp_mat">Materiais &amp; Consumíveis:</strong> <span class="mono">5x</span></li>
+            <li><strong data-i18n="drp_eq">Equipamentos Custom:</strong> <span class="mono">0.20% – 12%</span> <span class="muted small" data-i18n="drp_eq_note">(conforme raridade)</span></li>
+            <li><strong data-i18n="drp_card">Cartas Comuns / MVP:</strong> <span class="mono">0.25% / 0.10%</span></li>
+          </ul>
+          <p class="muted small" style="margin:12px 0 0" data-i18n="cmd_hint">
+            Comandos liberados no jogo: <span class="mono">@whodrops</span> e <span class="mono">@mobinfo</span>.
           </p>
         </article>
+
         <article class="info-card">
-          <div class="card-tag mono">05 // SINGLE SOURCE PIPELINE</div>
-          <h3 data-i18n="card_pipe_title">YAML ⇄ iteminfo.lua ⇄ Atlas Web</h3>
-          <p class="muted" data-i18n="card_pipe_desc">
-            Todos os monstros, spawns, drops e bônus de equipamentos são compilados por um único gerador Python. Isso garante que @whodrops, @mobinfo, descrição no client e esta tabela web nunca fiquem dessincronizados.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- TAB 4: CADASTRO DE CONTA (FILA DO COFRE) -->
-    <section id="tab-register" class="tab-panel">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow mono" data-i18n="reg_eyebrow">ACESSO PRIVADO POR CONVITE</p>
-          <h2 data-i18n="reg_title">Criar Conta no JaiRO</h2>
-          <p class="lead" data-i18n="reg_lead">Seu cadastro entra na fila segura do Cofre (GitHub Vault) ou direto no Host ativo. Quando você abrir o Jogar.bat, sua conta já estará sincronizada no servidor.</p>
-        </div>
-      </div>
-
-      <div class="register-layout">
-        <form id="registerForm" class="form-card" autocomplete="off">
-          <div class="form-grid">
-            <label class="field">
-              <span data-i18n="lbl_invite">Código de Convite do Grupo</span>
-              <input id="regInvite" class="input-field mono" type="text" required placeholder="JAIRO-PRONTERA-01" value="JAIRO-PRONTERA-01" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="lbl_user">Usuário (4–23 caracteres, sem _M/_F)</span>
-              <input id="regUser" class="input-field mono" type="text" required minlength="4" maxlength="23" pattern="[A-Za-z0-9_]+" placeholder="ex: kairo" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="lbl_pass">Senha (6–32 caracteres)</span>
-              <input id="regPass" class="input-field" type="password" required minlength="6" maxlength="32" placeholder="••••••••" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="lbl_pass2">Confirmar Senha</span>
-              <input id="regPass2" class="input-field" type="password" required minlength="6" maxlength="32" placeholder="••••••••" />
-            </label>
-
-            <label class="field">
-              <span data-i18n="lbl_sex">Gênero do Personagem</span>
-              <select id="regSex" class="select-field">
-                <option value="M" data-i18n="opt_male">Masculino (M)</option>
-                <option value="F" data-i18n="opt_female">Feminino (F)</option>
-              </select>
-            </label>
-
-            <label class="field">
-              <span data-i18n="lbl_class">Classe Alvo (Fase 1 — 99/50)</span>
-              <select id="regClass" class="select-field">
-                <option value="Knight">Knight</option>
-                <option value="Crusader">Crusader</option>
-                <option value="Wizard">Wizard</option>
-                <option value="Sage">Sage</option>
-                <option value="Hunter">Hunter</option>
-                <option value="Bard/Dancer">Bard / Dancer</option>
-                <option value="Priest">Priest</option>
-                <option value="Monk">Monk</option>
-                <option value="Assassin">Assassin</option>
-                <option value="Rogue">Rogue</option>
-                <option value="Blacksmith">Blacksmith</option>
-                <option value="Alchemist">Alchemist</option>
-              </select>
-            </label>
-          </div>
-
-          <details class="vault-config">
-            <summary class="mono" data-i18n="vault_cfg_title">Configuração Opcional: Envio Direto ao Cofre GitHub (kairosumida-dev/jairo-vault)</summary>
-            <div class="vault-cfg-body">
-              <p class="muted small" data-i18n="vault_cfg_hint">Se quiser que este navegador envie o ticket direto para o repositório privado sem precisar baixar o arquivo, cole um Fine-Grained Token com acesso apenas a kairosumida-dev/jairo-vault (fica salvo somente neste navegador).</p>
-              <input id="vaultToken" class="input-field mono" type="password" placeholder="github_pat_... (opcional)" />
-            </div>
-          </details>
-
-          <div class="form-actions">
-            <button class="btn-primary" type="submit" data-i18n="btn_submit">Gerar &amp; Enviar Cadastro</button>
-          </div>
-
-          <div id="regFeedback" class="feedback-box" hidden></div>
-        </form>
-
-        <aside class="info-card">
-          <div class="card-tag mono" data-i18n="flow_tag">FLUXO DO PRIMEIRO LOGIN</div>
-          <h3 data-i18n="how_works_title">Como funciona na prática</h3>
+          <div class="card-tag mono" data-i18n="flow_tag">04 // COMO JOGAR</div>
+          <h3 data-i18n="how_works_title">Entrada em 1 Clique</h3>
           <ol class="clean-steps">
-            <li data-i18n="step1">Preencha os dados ao lado e envie seu cadastro.</li>
-            <li data-i18n="step2">O site tenta entregar primeiro ao Host ativo local e/ou ao repositório privado jairo-vault. Se estiver offline sem token, baixa um ticket JSON pronto para o Jogar.bat importar.</li>
-            <li data-i18n="step3">Quem abrir o Jogar.bat primeiro assume como Host (via Epic EOS P2P), baixa a fila do GitHub Vault e injeta as contas novas no MariaDB antes do jogo abrir.</li>
-            <li data-i18n="step4">Se outro amigo já estiver hosteando, o daemon dele checa a fila a cada 15 segundos e cria sua conta automaticamente.</li>
+            <li data-i18n="step1">Crie sua conta ao lado com o código de convite do grupo.</li>
+            <li data-i18n="step2">Abra o <strong>Jogar.bat</strong>: se nenhum amigo estiver online, seu PC assume como Host automaticamente; se já houver sala aberta, você entra direto via Epic P2P.</li>
+            <li data-i18n="step3">O progresso é salvo na nuvem de forma contínua para ninguém perder nada.</li>
           </ol>
-        </aside>
+        </article>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="footer container mono">
-    <span>JaiRO // Phase 1: Prontera Frontier (Cap 99/50)</span>
-    <span id="footerStats">22 Maps · 101 Spawns · 50 Custom Items</span>
+    <span>JaiRO // Fase 1: Prontera (Cap 99/50)</span>
+    <span>Renewal Day 1 · EOS P2P</span>
   </footer>
 
-  <script src="./data/prontera_atlas.js?v=2"></script>
-  <script src="./app.js?v=2"></script>
+  <script src="./app.js?v=3"></script>
 </body>
 </html>
