@@ -480,15 +480,29 @@
     const filename = `${ts}_${user}.json`;
 
     let delivered = [];
-    // 1) Try local active Host daemon
-    try {
-      const resp = await fetch("http://127.0.0.1:8787/api/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(ticket),
-      });
-      if (resp.ok) delivered.push("Host Local (127.0.0.1:8787)");
-    } catch (_) {}
+    // 1) Try Cloudflare Worker same-origin endpoint (/jairo/api/register)
+    if (window.location.protocol.startsWith("http")) {
+      try {
+        const cfResp = await fetch("./api/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(ticket),
+        });
+        if (cfResp.ok) delivered.push("Cloudflare Portal (/jairo/api/register)");
+      } catch (_) {}
+    }
+
+    // 2) Try local active Host daemon
+    if (!delivered.length) {
+      try {
+        const resp = await fetch("http://127.0.0.1:8787/api/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(ticket),
+        });
+        if (resp.ok) delivered.push("Host Local (127.0.0.1:8787)");
+      } catch (_) {}
+    }
 
     // 2) Try GitHub Private Vault API if user supplied scoped PAT
     if (token) {
