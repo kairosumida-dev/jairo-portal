@@ -230,7 +230,8 @@ h2 { font-size: clamp(1.35rem, 2vw, 1.85rem); }
   gap: 12px;
 }
 @media (max-width: 680px) {
-  .prontera-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto; }
+  .prontera-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; }
+  .map-node { grid-row: auto !important; grid-column: auto !important; }
   .map-links-svg { display: none; }
 }
 
